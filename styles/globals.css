@@ -2,26 +2,25 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+input,textarea {
+  @apply border-4 border-gray-400 rounded-lg p-2 w-full mb-3;
+}
+input:focus,textarea:focus {
+  @apply border-blue-900;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+table tr td{
+  @apply border-2 p-3 px-5 border-black text-center
+}
+table thead tr td{
+  @apply rounded-t border-black
+}
+table thead tr{
+  @apply bg-blue-200
+}
+table{
+  @apply my-10 
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
-}
+    
+
